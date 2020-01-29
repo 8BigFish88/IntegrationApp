@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded',function(){
               container.innerHTML+='<div class="col-lg-4 card-flip">\
               <div class="flip">\
               <div class="front">\
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140" style="background: url('+user[i].avatar+') center; background-size: cover"></svg>\
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140" style="background: url('+user[i].avatar+') center; background-size: cover max-width: 140 px; max-height: 140px" ></svg>\
               <h2>'+user[i].name+'</h2>\
               <p>'+user[i].email+'</p>\
               <p><a id="detail_user'+user[i].id+'" class="btn btn-secondary" href="" role="button">View details »</a></p>\
