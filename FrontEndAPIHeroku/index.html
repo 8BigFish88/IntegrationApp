@@ -5,12 +5,12 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>Carousel Template · Bootstrap</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="./css/carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="./font/css/font-awesome.min.css">
 <meta name="theme-color" content="#563d7c">
     <!-- Custom styles for this template -->
   <body>
@@ -46,13 +46,20 @@
     </ol>
     <div id="mycarousel" class="carousel-inner">
         <div id="search">
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <form id="filter-search" onsubmit="search()" class="form-inline mt-2 mt-md-0">
+                <input  id="searchText" name="searchText" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
-            <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1578552980423-52ec071124f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=80')">
-            </div>
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"><img src="https://images.unsplash.com/photo-1578167597239-14f8fc680b6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1856&q=80"></rect></svg>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"><img src="https://images.unsplash.com/photo-1577949239703-4e1d8aa72824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2092&q=80"></rect></svg>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"><img src="https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80"></rect></svg>
+        </div>
     </div>
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -74,7 +81,16 @@
 
     <!-- Three columns of text below the carousel -->
     <div id="cards-container" class="row">
-    </div><!-- /.row -->
+    </div><!-- div che contiene tutte le card-->
+
+    </div>
+    <div id="card-paginator" class="text-center container col-lg-4 col-xs-4 col-md-4 col-sm-4">
+    <!-- div per la paginazione -->
+    </div>
+    <hr>
+    <div id="card-user-new" class=" text-center container col-lg-4 col-xs-4 col-md-4 col-sm-4">
+    <!-- div per la card di inserimento nuovo utente -->
+    </div>
 
     <!-- START THE FEATURETTES -->
 
